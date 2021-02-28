@@ -1,10 +1,13 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
+    {{!-- Animated letters --}}
     <div class="row justify-content-center">
-      {{!-- Animated letters --}}
       <h1 class="ml6">
         <span class="text-wrapper">
-          <span class="letters">Eat Da Burger</span>
+          <span class="letters">
+            Eat Da Burger
+            <i class="fas fa-hamburger fa-lg"></i>
+          </span>
         </span>
       </h1>
     </div>
@@ -55,17 +58,13 @@
   <div class="row justify-content-center">
     <form class="create-form">
 
-      <div class="form-group">
-        <label for="ca">Burger name:</label>
+      <div class="form-group row justify-content-center">
+        <label for="burger">Add your favorite type of burger</label>
         <input type="text" id="burger" name="name">
       </div>
 
       <div class="row justify-content-center">
-        <button type="submit">Add Burger</button>
-      </div>
-
-      <div class="row justify-content-center">
-        <p class="lead">Add your favorite type of burger, then eat 'em up</p>
+        <button class="submit" type="submit">Add Burger</button>
       </div>
 
     </form>
