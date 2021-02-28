@@ -16,13 +16,19 @@ router.get("/", (req, res) => {
         res.render("index", handlebarsObject);
 
     });
-    
+
 });
 
 // create
 router.post("/api/burgers", (req, res) => {
 
-})
+    burger.create(["burger_name", "devoured"], [res.body.burger_name, req.body.devoured], (res) => {
+
+        res.json({ id: result.insertId});
+
+    });
+
+});
 
 // update
 router.put("/api/burgers/:id", (req, res) => {
