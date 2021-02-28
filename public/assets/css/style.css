@@ -1,3 +1,9 @@
+h1,
+h2,
+.card-header {
+    font-family: 'RocknRoll One', sans-serif;
+}
+
 /* Animated letters */
 .ml6 {
     position: relative;
