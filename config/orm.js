@@ -35,8 +35,8 @@ const orm = {
 
     // selectAll()
     all:(tableInput, callback) => {
-        const queryString = "SELECT * FROM" + tableInput + ";";
-        connection.query(querySTring, (err, result) => {
+        const queryString = "SELECT * FROM " + tableInput + ";";
+        connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
             }
@@ -72,7 +72,7 @@ const orm = {
     // updateOne()
     update: (table, objColVals, condition, callback) => {
 
-        const queryString = "UPDATE" + table;
+        const queryString = "UPDATE " + table;
 
         queryString += "SET ";
         queryString += objToSql(objColVals);
