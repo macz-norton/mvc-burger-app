@@ -25,7 +25,7 @@ const burger = {
     },
 
     // update
-    update: (objColVals, condition, callback) {
+    update: (objColVals, condition, callback) => {
 
         orm.update("burgers", objColVals, condition, (res) => {
 
