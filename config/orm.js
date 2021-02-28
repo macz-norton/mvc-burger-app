@@ -45,7 +45,7 @@ const orm = {
     },
 
     // insertOne()
-    create: (table, cols, vals, callback) {
+    create: (table, cols, vals, callback) => {
         const queryString = "INSERT INTO " + table;
 
         queryString += " (";
@@ -70,7 +70,7 @@ const orm = {
     },
 
     // updateOne()
-    update: function(table, objColVals, condition, callback) {
+    update: (table, objColVals, condition, callback) => {
 
         const queryString = "UPDATE" + table;
 
