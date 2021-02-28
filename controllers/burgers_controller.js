@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
             burgers: data
         };
 
-        console.log(handlebarsObject);
+        // console.log(handlebarsObject);
         res.render("index", handlebarsObject);
 
     });
@@ -22,7 +22,7 @@ router.get("/", (req, res) => {
 // create
 router.post("/api/burgers", (req, res) => {
 
-    burger.create(["burger_name", "devoured"], [res.body.burger_name, req.body.devoured], (res) => {
+    burger.create(["burger_name"], [res.body.burger_name], (res) => {
 
         res.json({ id: result.insertId});
 
@@ -33,13 +33,15 @@ router.post("/api/burgers", (req, res) => {
 // update
 router.put("/api/burgers/:id", (req, res) => {
     
-    const condition = "id = " + req.params.id;
+    const id = req.params.id;
 
-    console.log("condition: ", condition);
+    console.log("BC 1 " + id)
+    console.log("BC 2" + req.params.id)
+    console.log("BC 3" + req.body.devoured)
 
     burger.update(
-        {devoured: req.body.devoured},
-        condition,
+        {devoured: true},
+        id,
         (result) => {
             
             if (result.changedRows === 0) {

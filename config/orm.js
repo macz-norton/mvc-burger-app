@@ -1,7 +1,7 @@
 const connection = require("./connection");
 
 function printQuestionMarks(num) {
-    const array = [];
+    let array = [];
 
     for (let i = 0; i < num; i++) {
         array.push("?");
@@ -12,10 +12,10 @@ function printQuestionMarks(num) {
 
 function objToSql(object) {
 
-    const array = [];
+    let array = [];
 
-    for (const key in object) {
-        const value = object[key];
+    for (let key in object) {
+        let value = object[key];
 
         if(Object.hasOwnProperty.call(object, key)) {
 
@@ -31,11 +31,11 @@ function objToSql(object) {
 
 }
 
-const orm = {
+let orm = {
 
     // selectAll()
     all:(tableInput, callback) => {
-        const queryString = "SELECT * FROM " + tableInput + ";";
+        let queryString = "SELECT * FROM " + tableInput + ";";
         connection.query(queryString, (err, result) => {
             if (err) {
                 throw err;
@@ -45,19 +45,19 @@ const orm = {
     },
 
     // insertOne()
-    create: (table, cols, vals, callback) => {
-        var queryString = "INSERT INTO " + table;
+    create: (table, cols, value, callback) => {
+        let queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
         queryString += ") ";
         queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
+        queryString += printQuestionMarks(value.length);
         queryString += ") ";
 
         console.log(queryString);
 
-        connection.query(queryString, vals, (err, result) => {
+        connection.query(queryString, value, (err, result) => {
 
             if (err) {
                 throw err;
@@ -70,16 +70,18 @@ const orm = {
     },
 
     // updateOne()
-    update: (table, objColVals, condition, callback) => {
+    update: (table, value, id, callback) => {
 
-        const queryString = "UPDATE " + table;
+        let queryString = "UPDATE " + table;
 
-        queryString += "SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
+        queryString += " SET ";
+        queryString += objToSql(value);
+        queryString += " WHERE id = ";
+        queryString += id;
 
-        console.log(queryString);
+        console.log("ORM 1 " + queryString);
+        console.log("ORM 2" + id);
+
         connection.query(queryString, (err, result) => {
 
             if (err) {

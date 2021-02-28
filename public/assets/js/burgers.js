@@ -2,9 +2,10 @@ $(function() {
   $(".devoured").on("click", (event) => {
     event.preventDefault();
     
-    const id = $(this).data("id");
+    let id = $(this).data("id");
+    console.log("Burgers JS" + id);
 
-    const newDevouredState = {
+    let newDevouredState = {
       devoured: 1
     };
 

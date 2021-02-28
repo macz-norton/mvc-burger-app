@@ -14,9 +14,9 @@ const burger = {
     },
 
     // create
-    create: (cols, vals, callback) => {
+    create: (cols, value, callback) => {
 
-        orm.create("burgers", cols, vals, (res) => {
+        orm.create("burgers", cols, value, (res) => {
 
             callback(res);
 
@@ -25,9 +25,9 @@ const burger = {
     },
 
     // update
-    update: (objColVals, condition, callback) => {
+    update: (value, id, callback) => {
 
-        orm.update("burgers", objColVals, condition, (res) => {
+        orm.update("burgers", value, id, (res) => {
 
             callback(res);
 
