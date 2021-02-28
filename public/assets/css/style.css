@@ -61,7 +61,7 @@ input {
     border-radius: 4px;
 }
 
-.change-devoured {
+.devoured {
     color: #D2D4D6;
     background-color: #1C2A45;
     border-radius: 4px;
@@ -72,9 +72,9 @@ input {
 
 }
 
-.change-devoured:active,
-.change-devoured:focus,
-.change-devoured:hover {
+.devoured:active,
+.devoured:focus,
+.devoured:hover {
     color: #1C2A45;
     background: #D7AC3E;
     border-color: #1C2A45;

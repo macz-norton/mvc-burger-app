@@ -1,33 +1,35 @@
 $(function() {
-  $(".change-devoured").on("click", (event) => {
+  $(".devoured").on("click", (event) => {
+    event.preventDefault();
+    
     const id = $(this).data("id");
-    const newDevoured = $(this).data("newDevoured");
 
     const newDevouredState = {
-      devoured: newDevoured
+      isDevoured: 1
     };
 
-    $.ajax("/api/burgeres/" + id, {
+    $.ajax("/api/burgers/" + id, {
       type: "PUT",
       data: newDevouredState
     }).then(() => {
-      console.log("Changed devoured to," newDevoured);
+      console.log("Changed to devoured");
       location.reload();
       }
     );
   });
 
-  $(".create-form").on("submit", (event) => {
+  $(".create-form").on("click", (event) => {
 
     event.preventDefault();
 
     const newBurger = {
-      name: $("#burger").val().trim()
+      burger_name: $("#burger").val().trim(),
+      isDevoured: 0
     };
 
     $.ajax("/api/burgers", {
       type: "POST",
-      data: newDevoured
+      data: newBurger
     }).then(() => {
       console.log("Created a new burger");
       location.reload();
