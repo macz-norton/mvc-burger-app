@@ -1,9 +1,23 @@
 const connection = require("./connection");
 
-// selectAll()
+const orm = {
 
-// insertOne()
+    // selectAll()
+    all:(tableInput, callback) => {
+        const queryString = "SELECT * FROM" + tableInput + ";";
+        connection.query(querySTring, (err, result) => {
+            if (err) {
+                throw err;
+            }
+            callback(result);
+        });
+    },
 
-// updateOne()
+    // insertOne()
+
+    // updateOne()
+
+}
+
 
 module.exports = orm;
