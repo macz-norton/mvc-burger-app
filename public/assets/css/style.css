@@ -26,10 +26,6 @@ button,
     font-family: 'RocknRoll One', sans-serif;
 }
 
-button {
-
-}
-
 .card {
     border-color: #D2D4D6;
     border-width: 2px;
@@ -37,7 +33,7 @@ button {
 }
 
 .card-header {
-    font-size: larger;
+    font-size: 1.25em;
     text-align: center;
     background-color: #1C2A45;
     color: #D2D4D6;
@@ -70,7 +66,9 @@ input {
     background-color: #1C2A45;
     border-radius: 4px;
     border-color: #1C2A45;
-    margin:5px;
+    margin: 5px;
+    border-width: 2px;
+
 }
 
 .change-devoured:active,
@@ -79,16 +77,20 @@ input {
     color: #1C2A45;
     background: #D7AC3E;
     border-color: #1C2A45;
-    border-width: 2px;
 }
 
 .submit {
     background-color: #D7AC3E;
     border-radius: 4px;
-    border-color: #1C2A45;
     margin: 2px;
-    padding: 5px;
+    padding: 8px;
     color: #1C2A45;
+}
+
+.submit:active,
+.submit:focus,
+.submit:hover {
+    padding: 5px;
 }
 
 .fa-hamburger {
