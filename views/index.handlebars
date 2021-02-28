@@ -26,8 +26,8 @@
         </div>
         <ul class="list-group list-group-flush">
           {{#each burgers}}
-            {{#unless isDevoured}}
-              {{> burger-block isDevoured=false}}
+            {{#unless devoured}}
+              {{> burger-block devoured=false}}
             {{/unless}}
           {{/each}}
         </ul>
@@ -41,8 +41,8 @@
         </div>
         <ul class="list-group list-group-flush">
           {{#each burgers}}
-            {{#if isDevoured}}
-              {{> burger-block isDevoured=true}}
+            {{#if devoured}}
+              {{> burger-block devoured=true}}
             {{/if}}
           {{/each}}
         </ul>

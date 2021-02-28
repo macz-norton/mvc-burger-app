@@ -5,7 +5,7 @@ $(function() {
     const id = $(this).data("id");
 
     const newDevouredState = {
-      isDevoured: 1
+      devoured: 1
     };
 
     $.ajax("/api/burgers/" + id, {
@@ -21,10 +21,11 @@ $(function() {
   $(".create-form").on("click", (event) => {
 
     event.preventDefault();
+    event.stopImmediatePropagation();
 
     const newBurger = {
       burger_name: $("#burger").val().trim(),
-      isDevoured: 0
+      devoured: 0
     };
 
     $.ajax("/api/burgers", {

@@ -1,4 +1,4 @@
-INSERT INTO burgers (id, burger_name, isDevoured)
+INSERT INTO burgers (id, burger_name, devoured)
 VALUES 
     (1, "Bacon burger", false),
     (2, "Pesto burger", true),

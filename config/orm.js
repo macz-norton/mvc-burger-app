@@ -46,7 +46,7 @@ const orm = {
 
     // insertOne()
     create: (table, cols, vals, callback) => {
-        const queryString = "INSERT INTO " + table;
+        var queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();
