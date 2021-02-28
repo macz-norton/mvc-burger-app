@@ -1,4 +1,15 @@
+const { query } = require("./connection");
 const connection = require("./connection");
+
+function printQuestionMarks(num) {
+    const array = [];
+
+    for (let i = 0; i < num; i++) {
+        array.push("?");
+    }
+
+    return array.toString();
+}
 
 const orm = {
 
@@ -14,6 +25,29 @@ const orm = {
     },
 
     // insertOne()
+    create: (table, cols, vals, callback) {
+        const queryString = "INSERT INTO " + table;
+
+        queryString += " (";
+        queryString += cols.toString();
+        queryString += ") ";
+        queryString += "VALUES (";
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
+
+        console.log(queryString);
+
+        connection.query(queryString, vals, (err, result) => {
+
+            if (err) {
+                throw err;
+            }
+
+            callback(result);
+
+        });
+
+    },
 
     // updateOne()
 
