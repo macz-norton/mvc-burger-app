@@ -1,7 +1,29 @@
+body,
+.jumbotron {
+    background-color: #1C2A45;
+}
+
+h1 {
+    color: #D7AC3E;
+}
+
 h1,
 h2,
 .card-header {
     font-family: 'RocknRoll One', sans-serif;
+}
+
+.card-header {
+    font-size: larger;
+    text-align: center;
+    background-color: #1C2A45;
+    border-color: #D2D4D6;
+    color: #D2D4D6;
+}
+
+.list-group {
+    background-color: #1C2A45;
+    border-color: #D2D4D6;
 }
 
 /* Animated letters */

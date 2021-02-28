@@ -8,17 +8,15 @@
         </span>
       </h1>
     </div>
-    <div class="row justify-content-center">
-      <p class="lead">Add your favorite type of burger, then eat 'em up</p>
-    </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
     <div class="col d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
+      <div class="card m-2" style="width: 25rem;">
         <div class="card-header">
+          <i class="fas fa-concierge-bell fa-lg"></i>
           Ready to be devoured
         </div>
         <ul class="list-group list-group-flush">
@@ -31,9 +29,10 @@
       </div>
     </div>
     <div class="col d-flex justify-content-center">
-      <div class="card" style="width: 18rem;">
+      <div class="card m-2" style="width: 25rem;">
         <div class="card-header">
           Already gone
+          <i class="fas fa-wind fa-lg"></i>
         </div>
         <ul class="list-group list-group-flush">
           {{#each burgers}}
@@ -63,6 +62,10 @@
 
       <div class="row justify-content-center">
         <button type="submit">Add Burger</button>
+      </div>
+
+      <div class="row justify-content-center">
+        <p class="lead">Add your favorite type of burger, then eat 'em up</p>
       </div>
 
     </form>
