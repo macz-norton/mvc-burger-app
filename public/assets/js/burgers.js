@@ -3,7 +3,7 @@ $(function() {
     event.preventDefault();
     
     let id = $(this).data("id");
-    console.log("Burgers JS" + id);
+    // console.log("Burgers JS" + id);
 
     let newDevouredState = {
       devoured: 1
@@ -24,7 +24,7 @@ $(function() {
     event.preventDefault();
     event.stopImmediatePropagation();
 
-    const newBurger = {
+    let newBurger = {
       burger_name: $("#burger").val().trim(),
       devoured: 0
     };

@@ -27,7 +27,14 @@
         <ul class="list-group list-group-flush">
           {{#each burgers}}
             {{#unless devoured}}
-              {{> burger-block devoured=true}}
+              <li class="list-group-item">
+              {{burger_name}}
+
+              <button type="button" class="devoured btn btn-outline btn-block" data-id="{{id}}"" data-devoured="{{devoured}}"">
+                Eat this burger
+              </button>
+
+            </li>
             {{/unless}}
           {{/each}}
         </ul>
@@ -42,7 +49,14 @@
         <ul class="list-group list-group-flush">
           {{#each burgers}}
             {{#if devoured}}
-              {{> burger-block devoured=false}}
+            <li class="list-group-item">
+              {{burger_name}}
+
+              {{!-- <button type="button" class="devoured btn btn-outline btn-block" data-id="{{id}}"" data-devoured="{{devoured}}"">
+                Eat this burger
+              </button> --}}
+
+            </li>
             {{/if}}
           {{/each}}
         </ul>
