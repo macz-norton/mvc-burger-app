@@ -1,4 +1,4 @@
-const orm = require("../config/orm");
+const orm = require("../config/orm.js");
 
 const burger = {
 
@@ -25,9 +25,9 @@ const burger = {
     },
 
     // update
-    update: (value, id, callback) => {
+    update: (objColsVals, condition, callback) => {
 
-        orm.update("burgers", value, id, (res) => {
+        orm.update("burgers", objColsVals, condition, (res) => {
 
             callback(res);
 
