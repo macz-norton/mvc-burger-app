@@ -28,9 +28,9 @@
           {{#each burgers}}
             {{#unless devoured}}
               <li class="list-group-item">
-              {{burger_name}}
+              {{this.burger_name}}
 
-              <button type="button" class="devoured btn btn-outline btn-block" data-id="{{id}}"" data-devoured="{{devoured}}"">
+              <button type="button" class="devoured btn btn-outline btn-block" data-id="{{this.id}}" data-devoured="{{this.devoured}}">
                 Eat this burger
               </button>
 

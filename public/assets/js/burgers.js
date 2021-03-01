@@ -3,10 +3,11 @@ $(function() {
     event.preventDefault();
     
     let id = $(this).data("id");
-    // console.log("Burgers JS" + id);
+    console.log("Public JS id: " + id)
+    let isDevoured = $(this).data("devoured");
 
     let newDevouredState = {
-      devoured: 1
+      devoured: isDevoured
     };
 
     $.ajax("/api/burgers/" + id, {
