@@ -70,17 +70,17 @@ let orm = {
     },
 
     // updateOne()
-    update: (table, value, id, callback) => {
+    update: (table, objColVals, condition, callback) => {
 
         let queryString = "UPDATE " + table;
 
         queryString += " SET ";
-        queryString += objToSql(value);
-        queryString += " WHERE id = ";
-        queryString += id;
+        queryString += objToSql(objColVals);
+        queryString += " WHERE ";
+        queryString += condition;
 
-        console.log("ORM 1 " + queryString);
-        console.log("ORM 2" + id);
+        // console.log("ORM 1 " + queryString);
+        // console.log("ORM 2" + id);
 
         connection.query(queryString, (err, result) => {
 
