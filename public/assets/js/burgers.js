@@ -2,9 +2,9 @@ $(function() {
   $(".devoured").on("click", (event) => {
     event.preventDefault();
     
-    let id = $(this).data("id");
+    let id = $(event.target).attr("data-id");
     console.log("Public JS id: " + id)
-    let isDevoured = $(this).data("devoured");
+    let isDevoured = $(event.target).attr("data-devoured");
 
     let newDevouredState = {
       devoured: isDevoured
@@ -20,7 +20,7 @@ $(function() {
     );
   });
 
-  $(".create-form").on("click", (event) => {
+  $(".submit").on("click", (event) => {
 
     event.preventDefault();
     event.stopImmediatePropagation();
@@ -42,20 +42,20 @@ $(function() {
 });
 
 // Animated letters
-const textWrapper = document.querySelector('.ml6 .letters');
-textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+// const textWrapper = document.querySelector('.ml6 .letters');
+// textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
-anime.timeline({loop: true})
-  .add({
-    targets: '.ml6 .letter',
-    translateY: ["1.1em", 0],
-    translateZ: 0,
-    duration: 750,
-    delay: (el, i) => 50 * i
-  }).add({
-    targets: '.ml6',
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 10000
-  });
+// anime.timeline({loop: true})
+//   .add({
+//     targets: '.ml6 .letter',
+//     translateY: ["1.1em", 0],
+//     translateZ: 0,
+//     duration: 750,
+//     delay: (el, i) => 50 * i
+//   }).add({
+//     targets: '.ml6',
+//     opacity: 0,
+//     duration: 1000,
+//     easing: "easeOutExpo",
+//     delay: 10000
+//   });
