@@ -34,7 +34,6 @@ You will be prompted with questions about what you would like to do with the Emp
 
 * [Node.js](https://nodejs.org/en/)
 * [mysql npm package](https://www.npmjs.com/package/mysql)
-* [Tobias Ashlin, Moving Letters](https://tobiasahlin.com/moving-letters/)
 * [Adobe Color, Renzel Remulla](https://color.adobe.com/)
 * [Font Awesome](https://fontawesome.com/)
 * [Bootstrap](https://getbootstrap.com/)
