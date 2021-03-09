@@ -20,8 +20,8 @@ No installation required.
 ## Usage
 
 You will be prompted with questions about what you would like to do with the Employee Directory (view, add, update) and your answers will be used to interact with the database:
-* Deployed application: []()
-* Gif that demonstrates the application's functionality: ![watch video]()
+* Deployed application: [https://mvc-burger-application.herokuapp.com/](https://mvc-burger-application.herokuapp.com/)
+* Application image: ![application image](https://user-images.githubusercontent.com/71162422/110418644-cf605980-804c-11eb-9269-ba998245f761.png)
 
 ## Tests
 
@@ -38,7 +38,8 @@ You will be prompted with questions about what you would like to do with the Emp
 * [Adobe Color, Renzel Remulla](https://color.adobe.com/)
 * [Font Awesome](https://fontawesome.com/)
 * [Bootstrap](https://getbootstrap.com/)
-
+* [Express](https://expressjs.com/)
+* [Dotenv](https://www.npmjs.com/package/dotenv)
 
 ## License
 
