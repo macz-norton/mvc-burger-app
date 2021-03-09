@@ -12,7 +12,6 @@ router.get("/", function(req, res) {
             burgers: data
         };
 
-        // console.log(handlebarsObject);
         res.render("index", handlebarsObject);
 
     });
@@ -34,10 +33,6 @@ router.post("/api/burgers", function(req, res) {
 router.put("/api/burgers/:id", function(req, res) {
     
     let condition = "id = " + req.params.id;
-
-    console.log("BC 1 " + condition);
-    console.log("BC 2" + req.params.id);
-    console.log("BC 3" + req.body.devoured);
 
     burger.update(
         {devoured: req.body.devoured},

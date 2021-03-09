@@ -79,9 +79,6 @@ let orm = {
         queryString += " WHERE ";
         queryString += condition;
 
-        // console.log("ORM 1 " + queryString);
-        // console.log("ORM 2" + id);
-
         connection.query(queryString, (err, result) => {
 
             if (err) {
